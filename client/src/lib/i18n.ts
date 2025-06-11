@@ -46,11 +46,14 @@ const resources = {
       "services.digital.title": "Compétences Numériques",
       "services.digital.description": "Formation aux outils numériques essentiels pour l'insertion professionnelle et l'autonomie dans le monde moderne.",
 
-      // News Section
-      "news.title": "Actualités",
-      "news.subtitle": "Restez informés de nos dernières activités, événements et réussites au sein de la communauté.",
-      "news.readMore": "Lire la suite →",
-      "news.viewAll": "Voir toutes les actualités",
+      // Blog Section
+      "blog.title": "Blog & Actualités",
+      "blog.subtitle": "Découvrez les dernières nouvelles et actualités de notre coopérative éducative",
+      "blog.readMore": "Lire plus",
+      "blog.backToBlog": "Retour au blog",
+      "blog.relatedArticles": "Articles liés",
+      "blog.articleNotFound": "Article non trouvé",
+      "blog.articleNotFoundDesc": "L'article que vous recherchez n'existe pas.",
 
       // Gallery Section
       "gallery.title": "Galerie",
@@ -131,11 +134,14 @@ const resources = {
       "services.digital.title": "المهارات الرقمية",
       "services.digital.description": "التدريب على الأدوات الرقمية الأساسية للإدماج المهني والاستقلالية في العالم الحديث.",
 
-      // News Section
-      "news.title": "الأخبار",
-      "news.subtitle": "ابق على اطلاع بأحدث أنشطتنا وفعالياتنا ونجاحاتنا داخل المجتمع.",
-      "news.readMore": "قراءة المزيد ←",
-      "news.viewAll": "مشاهدة جميع الأخبار",
+      // Blog Section
+      "blog.title": "المدونة والأخبار",
+      "blog.subtitle": "اكتشف آخر الأخبار والأحداث لتعاونيتنا التعليمية",
+      "blog.readMore": "قراءة المزيد",
+      "blog.backToBlog": "العودة إلى المدونة",
+      "blog.relatedArticles": "مقالات ذات صلة",
+      "blog.articleNotFound": "المقال غير موجود",
+      "blog.articleNotFoundDesc": "المقال الذي تبحث عنه غير موجود.",
 
       // Gallery Section
       "gallery.title": "المعرض",
@@ -216,11 +222,14 @@ const resources = {
       "services.digital.title": "Digital Skills",
       "services.digital.description": "Training in essential digital tools for professional integration and autonomy in the modern world.",
 
-      // News Section
-      "news.title": "News",
-      "news.subtitle": "Stay informed of our latest activities, events and successes within the community.",
-      "news.readMore": "Read more →",
-      "news.viewAll": "View all news",
+      // Blog Section
+      "blog.title": "Blog & News",
+      "blog.subtitle": "Discover the latest news and updates from our educational cooperative",
+      "blog.readMore": "Read more",
+      "blog.backToBlog": "Back to blog",
+      "blog.relatedArticles": "Related articles",
+      "blog.articleNotFound": "Article not found",
+      "blog.articleNotFoundDesc": "The article you are looking for does not exist.",
 
       // Gallery Section
       "gallery.title": "Gallery",
