@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -12,20 +13,31 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   const navigationItems = [
-    { href: '#accueil', key: 'nav.home' },
-    { href: '#apropos', key: 'nav.about' },
-    { href: '#services', key: 'nav.services' },
-    { href: '#actualites', key: 'nav.news' },
-    { href: '#galerie', key: 'nav.gallery' },
-    { href: '#contact', key: 'nav.contact' },
+    { href: '#accueil', key: 'nav.home', route: '/' },
+    { href: '#apropos', key: 'nav.about', route: '/' },
+    { href: '#services', key: 'nav.services', route: '/' },
+    { href: '/blog', key: 'nav.news', route: '/blog' },
+    { href: '#galerie', key: 'nav.gallery', route: '/' },
+    { href: '#contact', key: 'nav.contact', route: '/' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: typeof navigationItems[0]) => {
+    if (item.route === '/blog') {
+      // Navigate to blog page
+      window.location.href = '/blog';
+    } else if (item.href.startsWith('#')) {
+      // Navigate to home page first if not already there, then scroll
+      if (location !== '/') {
+        window.location.href = '/' + item.href;
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setMobileMenuOpen(false);
   };
@@ -49,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
               {navigationItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item)}
                   className="text-neutral hover:text-primary transition-colors font-medium"
                 >
                   {t(item.key)}
@@ -72,7 +84,7 @@ export default function Layout({ children }: LayoutProps) {
                     {navigationItems.map((item) => (
                       <button
                         key={item.href}
-                        onClick={() => scrollToSection(item.href)}
+                        onClick={() => handleNavigation(item)}
                         className="text-left px-4 py-2 text-neutral hover:text-primary transition-colors font-medium"
                       >
                         {t(item.key)}
@@ -122,7 +134,7 @@ export default function Layout({ children }: LayoutProps) {
                 {navigationItems.map((item) => (
                   <li key={item.href}>
                     <button
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => handleNavigation(item)}
                       className="hover:text-white transition-colors text-left"
                     >
                       {t(item.key)}
