@@ -8,7 +8,7 @@ const resources = {
       "nav.home": "Accueil",
       "nav.about": "À propos",
       "nav.services": "Nos services",
-      "nav.news": "Actualités",
+      "nav.news": "Blog",
       "nav.gallery": "Galerie",
       "nav.contact": "Contact",
 
@@ -93,7 +93,7 @@ const resources = {
       "nav.home": "الرئيسية",
       "nav.about": "من نحن",
       "nav.services": "خدماتنا",
-      "nav.news": "الأخبار",
+      "nav.news": "المدونة",
       "nav.gallery": "المعرض",
       "nav.contact": "اتصل بنا",
 
@@ -178,7 +178,7 @@ const resources = {
       "nav.home": "Home",
       "nav.about": "About",
       "nav.services": "Our Services",
-      "nav.news": "News",
+      "nav.news": "Blog",
       "nav.gallery": "Gallery",
       "nav.contact": "Contact",
 
