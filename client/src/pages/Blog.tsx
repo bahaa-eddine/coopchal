@@ -48,10 +48,10 @@ export default function Blog() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-neutral mb-4">
-            Blog & Actualités
+            {t('blog.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Découvrez les dernières nouvelles et actualités de notre coopérative éducative
+            {t('blog.subtitle')}
           </p>
         </div>
 
@@ -83,8 +83,7 @@ export default function Blog() {
                 
                 <Link href={`/blog/${article.slug}`}>
                   <Button variant="link" className="text-primary p-0 group-hover:text-blue-700">
-                    {currentLanguage === 'fr' ? 'Lire plus' : 
-                     currentLanguage === 'ar' ? 'قراءة المزيد' : 'Read more'}
+                    {t('blog.readMore')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>

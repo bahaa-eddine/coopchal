@@ -48,18 +48,15 @@ export default function BlogPost() {
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-bold text-neutral mb-4">
-            {currentLanguage === 'fr' ? 'Article non trouvé' : 
-             currentLanguage === 'ar' ? 'المقال غير موجود' : 'Article not found'}
+            {t('blog.articleNotFound')}
           </h1>
           <p className="text-gray-600 mb-8">
-            {currentLanguage === 'fr' ? 'L\'article que vous recherchez n\'existe pas.' : 
-             currentLanguage === 'ar' ? 'المقال الذي تبحث عنه غير موجود.' : 'The article you are looking for does not exist.'}
+            {t('blog.articleNotFoundDesc')}
           </p>
           <Link href="/blog">
             <Button className="bg-primary text-white hover:bg-blue-700">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {currentLanguage === 'fr' ? 'Retour au blog' : 
-               currentLanguage === 'ar' ? 'العودة إلى المدونة' : 'Back to blog'}
+              {t('blog.backToBlog')}
             </Button>
           </Link>
         </div>
@@ -75,8 +72,7 @@ export default function BlogPost() {
           <Link href="/blog">
             <Button variant="outline" className="hover:bg-gray-100">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {currentLanguage === 'fr' ? 'Retour au blog' : 
-               currentLanguage === 'ar' ? 'العودة إلى المدونة' : 'Back to blog'}
+              {t('blog.backToBlog')}
             </Button>
           </Link>
         </div>
@@ -116,8 +112,7 @@ export default function BlogPost() {
         {/* Related articles */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-neutral mb-8">
-            {currentLanguage === 'fr' ? 'Articles liés' : 
-             currentLanguage === 'ar' ? 'مقالات ذات صلة' : 'Related articles'}
+            {t('blog.relatedArticles')}
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8">
