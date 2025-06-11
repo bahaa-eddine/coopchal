@@ -19,8 +19,8 @@ export default function Layout({ children }: LayoutProps) {
     { href: '#accueil', key: 'nav.home', route: '/' },
     { href: '#apropos', key: 'nav.about', route: '/' },
     { href: '#services', key: 'nav.services', route: '/' },
-    { href: '/blog', key: 'nav.news', route: '/blog' },
     { href: '#galerie', key: 'nav.gallery', route: '/' },
+    { href: '/blog', key: 'nav.news', route: '/blog' },
     { href: '#contact', key: 'nav.contact', route: '/' },
   ];
 
@@ -58,7 +58,25 @@ export default function Layout({ children }: LayoutProps) {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navigationItems.map((item) => (
+              {navigationItems.slice(0, -2).map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavigation(item)}
+                  className="text-neutral hover:text-primary transition-colors font-medium"
+                >
+                  {t(item.key)}
+                </button>
+              ))}
+              {navigationItems.slice(-2, -1).map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavigation(item)}
+                  className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
+                  {t(item.key)}
+                </button>
+              ))}
+              {navigationItems.slice(-1).map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavigation(item)}
