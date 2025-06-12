@@ -2,12 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ContactForm from '@/components/ContactForm';
-import { 
-  BookOpen, 
-  Bolt, 
-  Lightbulb, 
-  SpellCheck, 
-  Users, 
+import {
+  BookOpen,
+  Bolt,
+  Lightbulb,
+  SpellCheck,
+  Users,
   Laptop,
   History,
   Target,
@@ -108,13 +108,14 @@ export default function Home() {
   ];
 
   const galleryImages = [
-    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600",
-    "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600"
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/494289169_1427656765344989_3751821437827179527_n.jpg?updatedAt=1749765252522",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/493211659_1418954806215185_3712269213520905985_n.jpg?updatedAt=1749765242807",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/499732613_1434496184661047_9032901675267132644_n.jpg?updatedAt=1749765242041",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/494142429_1418954286215237_4955301748475315993_n.jpg?updatedAt=1749765241980",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/495649976_1418240026286663_183706093966972958_n.jpg?updatedAt=1749765240211",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/493969769_1434682161309116_2807582087254141694_n.jpg?updatedAt=1749765239968"
   ];
+
 
   return (
     <div>
@@ -130,13 +131,13 @@ export default function Home() {
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
+                <Button
                   onClick={() => scrollToSection('#services')}
                   className="bg-primary text-white px-8 py-4 hover:bg-blue-700"
                 >
                   {t('hero.cta1')}
                 </Button>
-                <Button 
+                <Button
                   variant="outline"
                   onClick={() => scrollToSection('#contact')}
                   className="border-2 border-primary text-primary px-8 py-4 hover:bg-primary hover:text-white"
@@ -146,9 +147,9 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Students learning in classroom" 
+              <img
+                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                alt="Students learning in classroom"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border">
@@ -178,12 +179,12 @@ export default function Home() {
               {t('about.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Community workshop and learning activities" 
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                alt="Community workshop and learning activities"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
             </div>
@@ -226,7 +227,7 @@ export default function Home() {
               {t('services.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
@@ -263,13 +264,13 @@ export default function Home() {
               {t('gallery.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
             {galleryImages.map((image, index) => (
               <div key={index} className="relative group cursor-pointer">
-                <img 
-                  src={image} 
-                  alt={`Gallery image ${index + 1}`} 
+                <img
+                  src={image}
+                  alt={`Gallery image ${index + 1}`}
                   className={`w-full h-48 object-cover rounded-lg transition-transform group-hover:scale-105 ${index === 4 ? 'md:col-span-2' : ''}`}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all rounded-lg flex items-center justify-center">
@@ -278,7 +279,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           {/* Testimonials */}
           <Card className="bg-white shadow-lg border-none">
             <CardContent className="p-8">
@@ -315,11 +316,11 @@ export default function Home() {
               {t('contact.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <ContactForm />
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Contact Details */}
@@ -340,7 +341,7 @@ export default function Home() {
                         <p className="text-gray-600">Hay Al Moqawama, Oued Zem, Maroc</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-4">
                       <div className="bg-secondary/20 p-3 rounded-lg flex-shrink-0">
                         <Phone className="text-secondary w-5 h-5" />
@@ -352,7 +353,7 @@ export default function Home() {
                         <p className="text-gray-600">+212 637-334124</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-4">
                       <div className="bg-accent/20 p-3 rounded-lg flex-shrink-0">
                         <Clock className="text-accent w-5 h-5" />
@@ -367,7 +368,7 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-              
+
               {/* Map */}
               <div className="bg-gray-200 rounded-xl overflow-hidden h-72">
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10">
@@ -378,7 +379,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Social Media */}
               <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-none">
                 <CardContent className="p-6">
