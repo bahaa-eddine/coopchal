@@ -52,7 +52,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex items-center space-x-3">
               <GraduationCap className="w-8 h-8 text-primary" />
               <h1 className="text-xl font-bold text-primary">
-                Coopérative Chabab Alzahraa
+                CoopChAl
               </h1>
             </div>
 
@@ -125,7 +125,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <h3 className="text-xl font-bold mb-4">Coopérative Chabab Alzahraa</h3>
+              <h3 className="text-xl font-bold mb-4">CoopChAl</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {t('footer.description')}
               </p>
