@@ -148,7 +148,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                src="https://ik.imagekit.io/coopchal/coopchal%20pics/488254019_1395426011901398_8459094447579723761_n.jpg?updatedAt=1749766636144"
                 alt="Students learning in classroom"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                src="https://ik.imagekit.io/coopchal/coopchal%20pics/488540831_1395430941900905_4050549180478189471_n.jpg?updatedAt=1749766507168"
                 alt="Community workshop and learning activities"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
