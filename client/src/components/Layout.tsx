@@ -183,7 +183,18 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           <div className="border-t border-gray-600 mt-12 pt-8 text-center text-gray-400">
-            <p>{t('footer.copyright')}</p>
+            <p>© 2025 CoopChAl. Tous droits réservés.</p>
+            <p className="mt-2">
+              Créé par{' '}
+              <a 
+                href="https://bahaa-eddine.github.io/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-blue-300 transition-colors font-medium"
+              >
+                B.ELBAGHAZAOUI
+              </a>
+            </p>
           </div>
         </div>
       </footer>
