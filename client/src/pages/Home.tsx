@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ContactForm from '@/components/ContactForm';
+import ImageModal from '@/components/ImageModal';
 import {
   BookOpen,
   Bolt,
@@ -21,12 +23,35 @@ import {
 
 export default function Home() {
   const { t } = useTranslation();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const openModal = (index: number) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
   };
 
   const services = [
@@ -268,7 +293,11 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative group cursor-pointer">
+              <div 
+                key={index} 
+                className="relative group cursor-pointer"
+                onClick={() => openModal(index)}
+              >
                 <img
                   src={image}
                   alt={`Gallery image ${index + 1}`}
@@ -407,6 +436,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <ImageModal
+        images={galleryImages}
+        currentIndex={currentImageIndex}
+        isOpen={modalOpen}
+        onClose={closeModal}
+        onNext={nextImage}
+        onPrevious={previousImage}
+      />
     </div>
   );
 }
