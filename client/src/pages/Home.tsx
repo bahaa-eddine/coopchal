@@ -109,9 +109,9 @@ export default function Home() {
 
   const galleryImages = [
     "https://ik.imagekit.io/coopchal/coopchal%20pics/494289169_1427656765344989_3751821437827179527_n.jpg?updatedAt=1749765252522",
-    "https://ik.imagekit.io/coopchal/coopchal%20pics/493211659_1418954806215185_3712269213520905985_n.jpg?updatedAt=1749765242807",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2011.16.04_69aaec28.jpg?updatedAt=1749837945087",
     "https://ik.imagekit.io/coopchal/coopchal%20pics/499732613_1434496184661047_9032901675267132644_n.jpg?updatedAt=1749765242041",
-    "https://ik.imagekit.io/coopchal/coopchal%20pics/494142429_1418954286215237_4955301748475315993_n.jpg?updatedAt=1749765241980",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2011.17.25_25ab71d6.jpg?updatedAt=1749837945091",
     "https://ik.imagekit.io/coopchal/coopchal%20pics/495649976_1418240026286663_183706093966972958_n.jpg?updatedAt=1749765240211",
     "https://ik.imagekit.io/coopchal/coopchal%20pics/493969769_1434682161309116_2807582087254141694_n.jpg?updatedAt=1749765239968"
   ];
@@ -148,7 +148,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://ik.imagekit.io/coopchal/coopchal%20pics/488254019_1395426011901398_8459094447579723761_n.jpg?updatedAt=1749766636144"
+                src="https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2011.15.38_6a7bc733.jpg?updatedAt=1749837945173"
                 alt="Students learning in classroom"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://ik.imagekit.io/coopchal/coopchal%20pics/488540831_1395430941900905_4050549180478189471_n.jpg?updatedAt=1749766507168"
+                src="https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2011.31.29_0615c619.jpg?updatedAt=1749837945095"
                 alt="Community workshop and learning activities"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
