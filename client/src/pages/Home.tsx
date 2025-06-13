@@ -113,7 +113,8 @@ export default function Home() {
     "https://ik.imagekit.io/coopchal/coopchal%20pics/499732613_1434496184661047_9032901675267132644_n.jpg?updatedAt=1749765242041",
     "https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2011.17.25_25ab71d6.jpg?updatedAt=1749837945091",
     "https://ik.imagekit.io/coopchal/coopchal%20pics/495649976_1418240026286663_183706093966972958_n.jpg?updatedAt=1749765240211",
-    "https://ik.imagekit.io/coopchal/coopchal%20pics/493969769_1434682161309116_2807582087254141694_n.jpg?updatedAt=1749765239968"
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/493969769_1434682161309116_2807582087254141694_n.jpg?updatedAt=1749765239968",
+    "https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2020.38.26_714de7ad.jpg?updatedAt=1749843563666",
   ];
 
 
