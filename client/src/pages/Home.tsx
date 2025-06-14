@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ContactForm from '@/components/ContactForm';
 import ImageModal from '@/components/ImageModal';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import {
   BookOpen,
   Bolt,
@@ -25,6 +26,7 @@ export default function Home() {
   const { t } = useTranslation();
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -53,6 +55,15 @@ export default function Home() {
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
+
+  useEffect(() => {
+    // Simulate page loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const services = [
     {
@@ -142,6 +153,10 @@ export default function Home() {
     "https://ik.imagekit.io/coopchal/coopchal%20pics/WhatsApp%20Image%202025-06-13%20%C3%A0%2020.38.26_714de7ad.jpg?updatedAt=1749843563666",
   ];
 
+
+  if (isLoading) {
+    return <LoadingSpinner fullScreen size="lg" text="Chargement de la page..." />;
+  }
 
   return (
     <div>

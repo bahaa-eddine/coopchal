@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'wouter';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import articlesData from '@/data/blog/articles.json';
 
 interface Article {
@@ -30,8 +32,18 @@ interface Article {
 export default function Blog() {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language as 'fr' | 'ar' | 'en';
+  const [isLoading, setIsLoading] = useState(true);
   
   const articles: Article[] = articlesData.articles;
+
+  useEffect(() => {
+    // Simulate blog loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
