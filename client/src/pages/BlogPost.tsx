@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowLeft } from 'lucide-react';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import articlesData from '@/data/blog/articles.json';
 
 interface Article {
@@ -30,9 +32,19 @@ export default function BlogPost() {
   const { t, i18n } = useTranslation();
   const { slug } = useParams();
   const currentLanguage = i18n.language as 'fr' | 'ar' | 'en';
+  const [isLoading, setIsLoading] = useState(true);
   
   const articles: Article[] = articlesData.articles;
   const article = articles.find(a => a.slug === slug);
+
+  useEffect(() => {
+    // Simulate article loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, [slug]);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -42,6 +54,10 @@ export default function BlogPost() {
       day: 'numeric'
     });
   };
+
+  if (isLoading) {
+    return <LoadingSpinner fullScreen size="lg" text="Chargement de l'article..." />;
+  }
 
   if (!article) {
     return (
